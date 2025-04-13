@@ -3,38 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ایلا هیر | eila Hair</title>
+  <title>کلینیک ایلا هیر | Eila Hair Clinic</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Tahoma', sans-serif;
-      background-color: #000;
-      color: #FFD700;
+      font-family: 'Vazir', sans-serif;
+      background-color: #fff;
+      color: #000;
       text-align: center;
     }
 
+    header {
+      padding: 40px 20px 10px;
+    }
+
     header img {
-      max-width: 150px;
-      margin-top: 30px;
+      width: 140px;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 2.4em;
       margin: 20px 0 10px;
     }
 
     p {
-      font-size: 1.2em;
-      margin: 10px auto;
+      font-size: 1.1em;
+      margin: 15px auto;
       max-width: 90%;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .whatsapp-btn {
       background-color: #25D366;
       color: #fff;
-      padding: 15px 30px;
-      margin: 25px auto;
+      padding: 14px 28px;
+      margin: 30px auto;
       display: inline-block;
       border-radius: 8px;
       font-size: 1.1em;
@@ -45,8 +48,8 @@
       position: fixed;
       top: 20px;
       left: 20px;
-      background-color: #FFD700;
-      color: black;
+      background-color: #000;
+      color: #fff;
       padding: 8px 12px;
       border-radius: 5px;
       cursor: pointer;
@@ -56,7 +59,8 @@
     footer {
       margin-top: 40px;
       font-size: 0.9em;
-      color: #888;
+      color: #666;
+      padding: 20px;
     }
   </style>
 </head>
@@ -65,47 +69,48 @@
   <div class="language-switch" onclick="switchLanguage()">English</div>
 
   <header>
-    <img src="037546CE-68C4-41B4-906F-52BCC14D9A60.png/logo.png" alt="Eila Hair Logo" />
-    <h1 id="title-fa">کلینیک زیبایی ایلا هیر</h1>
+    <img src="https://raw.githubusercontent.com/rana95/eila_hair/main/logo.png" alt="Eila Hair Logo" />
+    <h1 id="title-fa">کلینیک تخصصی کاشت مو ایلا هیر</h1>
     <p id="desc-fa">
-      تخصص در کاشت مو، ابرو و زیبایی<br />
-           کاشت مو فقط در یک روز با نتیجه‌ای دائمی 
-      
-      
-      .<br />
-      بدون نیاز به جراحی و با بالاترین کیفیت و تراکم مو.
+      ایلا هیر، انتخابی مطمئن برای بازگرداندن زیبایی طبیعی شماست.<br />
+      کاشت موی طبیعی با تراکم بالا، بدون درد و جراحی، فقط در یک جلسه.<br />
+      نتیجه‌ای دائمی، ظاهری طبیعی، و تیمی حرفه‌ای در کنار شماست.
     </p>
   </header>
 
   <a class="whatsapp-btn" href="https://wa.me/989305393229?text=سلام، برای مشاوره رایگان پیام می‌دم" target="_blank">
-    دریافت مشاوره رایگان در واتساپ
+    مشاوره رایگان در واتساپ
   </a>
 
   <footer>
-    Eila Hair © 2025 - تمامی حقوق محفوظ است
+    © 2025 Eila Hair Clinic — تمامی حقوق محفوظ است
   </footer>
 
   <script>
     function switchLanguage() {
       const langBtn = document.querySelector('.language-switch');
-      const isFarsi = document.getElementById('title-fa').style.display !== 'none';
+      const isFarsi = document.getElementById('title-fa').dir !== 'ltr';
 
       if (isFarsi) {
-        document.getElementById('title-fa').innerText = "Eila Hair Beauty Clinic";
+        document.body.dir = 'ltr';
+        document.body.lang = 'en';
+        document.getElementById('title-fa').innerText = "Eila Hair Clinic – Natural Hair Restoration";
         document.getElementById('desc-fa').innerHTML = `
-          Specialist in hair, eyebrow, and beauty services.<br />
-          Hair transplant is done only once and provides permanent results.<br />
-          Non-surgical, with the highest quality and density.
+          Eila Hair is your trusted partner in restoring natural beauty.<br />
+          High-density hair transplant, non-surgical and painless, done in just one session.<br />
+          Permanent results, natural look, and a team of experts beside you.
         `;
-        langBtn.innerText = 'فارسی';
+        langBtn.innerText = "فارسی";
       } else {
-        document.getElementById('title-fa').innerText = "کلینیک زیبایی ایلا هیر";
+        document.body.dir = 'rtl';
+        document.body.lang = 'fa';
+        document.getElementById('title-fa').innerText = "کلینیک تخصصی کاشت مو ایلا هیر";
         document.getElementById('desc-fa').innerHTML = `
-          تخصص در کاشت مو، ابرو و زیبایی<br />
-          کاشت مو فقط یکبار انجام می‌شود و نتیجه‌ای دائمی دارد.<br />
-          بدون نیاز به جراحی و با بالاترین کیفیت و تراکم مو.
+          ایلا هیر، انتخابی مطمئن برای بازگرداندن زیبایی طبیعی شماست.<br />
+          کاشت موی طبیعی با تراکم بالا، بدون درد و جراحی، فقط در یک جلسه.<br />
+          نتیجه‌ای دائمی، ظاهری طبیعی، و تیمی حرفه‌ای در کنار شماست.
         `;
-        langBtn.innerText = 'English';
+        langBtn.innerText = "English";
       }
     }
   </script>
