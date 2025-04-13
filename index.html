@@ -1,79 +1,111 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ایلا هیر | Eila Hair</title>
   <style>
     body {
-      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f7f7f7;
+      font-family: 'Tahoma', sans-serif;
+      background-color: #000;
+      color: #FFD700;
       text-align: center;
-      color: #333;
     }
-    header {
-      background-color: white;
-      padding: 30px 20px 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
+
     header img {
-      width: 120px;
-      height: auto;
-      border-radius: 50%;
+      max-width: 150px;
+      margin-top: 30px;
     }
+
     h1 {
-      font-size: 28px;
-      margin-top: 10px;
+      font-size: 2.5em;
+      margin: 20px 0 10px;
     }
+
     p {
-      font-size: 18px;
-      margin: 10px 0 30px;
-    }
-    .contact {
-      font-size: 20px;
-      background-color: #eee;
-      padding: 15px;
-      margin: 20px;
-      border-radius: 10px;
-    }
-    .image-container {
-      margin: 20px auto;
-    }
-    .image-container img {
+      font-size: 1.2em;
+      margin: 10px auto;
       max-width: 90%;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      line-height: 1.8;
     }
+
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: #fff;
+      padding: 15px 30px;
+      margin: 25px auto;
+      display: inline-block;
+      border-radius: 8px;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+
+    .language-switch {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #FFD700;
+      color: black;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
     footer {
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
     }
   </style>
 </head>
 <body>
 
+  <div class="language-switch" onclick="switchLanguage()">English</div>
+
   <header>
-    <img src="logo.jpg" alt="لوگو ایلا هیر">
-    <h1>کلینیک زیبایی ایلا هیر</h1>
-    <p>تخصص در کاشت مو، ابرو و زیبایی</p>
+    <img src="logo.png" alt="Eila Hair Logo" />
+    <h1 id="title-fa">کلینیک زیبایی ایلا هیر</h1>
+    <p id="desc-fa">
+      تخصص در کاشت مو، ابرو و زیبایی<br />
+      کاشت مو فقط یکبار انجام می‌شود و نتیجه‌ای دائمی دارد.<br />
+      بدون نیاز به جراحی و با بالاترین کیفیت و تراکم مو.
+    </p>
   </header>
 
-  <div class="contact">
-    <strong>تماس با ما:</strong><br>
-    00989305393229
-  </div>
-
-  <div class="image-container">
-    <img src="https://via.placeholder.com/600x400?text=نمونه+کار" alt="نمونه کار">
-  </div>
+  <a class="whatsapp-btn" href="https://wa.me/989305393229?text=سلام، برای مشاوره رایگان پیام می‌دم" target="_blank">
+    دریافت مشاوره رایگان در واتساپ
+  </a>
 
   <footer>
-    تمامی حقوق محفوظ است - Eila Hair © 2025
+    Eila Hair © 2025 - تمامی حقوق محفوظ است
   </footer>
+
+  <script>
+    function switchLanguage() {
+      const langBtn = document.querySelector('.language-switch');
+      const isFarsi = document.getElementById('title-fa').style.display !== 'none';
+
+      if (isFarsi) {
+        document.getElementById('title-fa').innerText = "Eila Hair Beauty Clinic";
+        document.getElementById('desc-fa').innerHTML = `
+          Specialist in hair, eyebrow, and beauty services.<br />
+          Hair transplant is done only once and provides permanent results.<br />
+          Non-surgical, with the highest quality and density.
+        `;
+        langBtn.innerText = 'فارسی';
+      } else {
+        document.getElementById('title-fa').innerText = "کلینیک زیبایی ایلا هیر";
+        document.getElementById('desc-fa').innerHTML = `
+          تخصص در کاشت مو، ابرو و زیبایی<br />
+          کاشت مو فقط یکبار انجام می‌شود و نتیجه‌ای دائمی دارد.<br />
+          بدون نیاز به جراحی و با بالاترین کیفیت و تراکم مو.
+        `;
+        langBtn.innerText = 'English';
+      }
+    }
+  </script>
 
 </body>
 </html>
