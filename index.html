@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>کلینیک ایلا هیر | Eila Hair Clinic</title>
+  <title>مجموعه تخصصی ایلا هیر | Eila Hair</title>
   <style>
     body {
       margin: 0;
@@ -56,6 +57,20 @@
       font-size: 0.9em;
     }
 
+    .promo-image {
+      width: 100%;
+      max-width: 700px;
+      margin: 30px auto 10px;
+      display: block;
+    }
+
+    .below-image-text {
+      font-size: 1.05em;
+      margin: 20px auto 0;
+      line-height: 1.8;
+      color: #222;
+    }
+
     footer {
       margin-top: 40px;
       font-size: 0.9em;
@@ -70,7 +85,7 @@
 
   <header>
     <img src="https://raw.githubusercontent.com/rana95/eila_hair/main/logo.png" alt="Eila Hair Logo" />
-    <h1 id="title-fa">کلینیک تخصصی کاشت مو ایلا هیر</h1>
+    <h1 id="title-fa">مجموعه تخصصی کاشت مو ایلا هیر</h1>
     <p id="desc-fa">
       ایلا هیر، انتخابی مطمئن برای بازگرداندن زیبایی طبیعی شماست.<br />
       کاشت موی طبیعی با تراکم بالا، بدون درد و جراحی، فقط در یک جلسه.<br />
@@ -78,12 +93,19 @@
     </p>
   </header>
 
-  <a class="whatsapp-btn" href="https://wa.me/989305393229?text=سلام، برای مشاوره رایگان پیام می‌دم" target="_blank">
+  <img class="promo-image" src="https://raw.githubusercontent.com/rana95/eila_hair/main/promo-image.png" alt="Eila Hair Promo" />
+
+  <div class="below-image-text">
+    <strong>سابقه‌ای درخشان از کاشت موی موفق در ایران و عراق</strong><br />
+    با اعتماد صدها مراجعه‌کننده از دو کشور، کیفیت و رضایت، افتخار ماست.
+  </div>
+
+  <a class="whatsapp-btn" href="https://wa.me/989305393229?text=سلام، برای مشاوره رایگان پیام می‌دهم" target="_blank">
     مشاوره رایگان در واتساپ
   </a>
 
   <footer>
-    © 2025 Eila Hair Clinic — تمامی حقوق محفوظ است
+    © 2025 Eila Hair — تمامی حقوق محفوظ است
   </footer>
 
   <script>
@@ -94,17 +116,17 @@
       if (isFarsi) {
         document.body.dir = 'ltr';
         document.body.lang = 'en';
-        document.getElementById('title-fa').innerText = "Eila Hair Clinic – Natural Hair Restoration";
+        document.getElementById('title-fa').innerText = "Eila Hair – Expert Hair Transplant";
         document.getElementById('desc-fa').innerHTML = `
           Eila Hair is your trusted partner in restoring natural beauty.<br />
           High-density hair transplant, non-surgical and painless, done in just one session.<br />
-          Permanent results, natural look, and a team of experts beside you.
+          Permanent results, natural look, and a professional team beside you.
         `;
         langBtn.innerText = "فارسی";
       } else {
         document.body.dir = 'rtl';
         document.body.lang = 'fa';
-        document.getElementById('title-fa').innerText = "کلینیک تخصصی کاشت مو ایلا هیر";
+        document.getElementById('title-fa').innerText = "مجموعه تخصصی کاشت مو ایلا هیر";
         document.getElementById('desc-fa').innerHTML = `
           ایلا هیر، انتخابی مطمئن برای بازگرداندن زیبایی طبیعی شماست.<br />
           کاشت موی طبیعی با تراکم بالا، بدون درد و جراحی، فقط در یک جلسه.<br />
